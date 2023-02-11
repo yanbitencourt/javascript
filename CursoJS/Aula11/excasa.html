@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Qual a sua nacionalidade?</h1>
+    Em que país nasceu? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="checar" onclick="checar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function checar() {
+            var txtn = window.document.querySelector("input#txtnac")
+            var res = window.document.querySelector("div#res")
+            var nac = txtn.value
+            if (nac == "brasil" || nac == "Brasil") {
+            res.innerHTML += `Você é Brasileiro`
+            } else {
+                res.innerHTML += `Você é gringo`
+            }
+        }
+    </script>
+</body>
+</html>
